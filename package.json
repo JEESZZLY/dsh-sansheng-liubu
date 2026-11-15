@@ -1,0 +1,64 @@
+{
+  "name": "dsh-sansheng-liubu",
+  "version": "0.1.0",
+  "description": "Sansheng Liubu — a Three Departments & Six Ministries board for DSH agent teams · 三省六部看板：把 DSH 团队（agentTeam）按中书省／门下省／尚书省＋六部归曹展示，附圣旨动效",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "dsh-client",
+    "dsh-ui",
+    "deepseek-harness",
+    "team",
+    "agent-team",
+    "orchestration",
+    "sansheng-liubu",
+    "three-departments"
+  ],
+  "license": "MIT",
+  "author": "JEESZZLY",
+  "type": "module",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "pack:win": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/pack.ps1"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ],
+      "platform": "web"
+    }
+  },
+  "engines": {
+    "node": ">=22.19.0",
+    "dsh": ">=0.2.1-rc.1 <0.3.0-0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JEESZZLY/dsh-sansheng-liubu.git"
+  },
+  "homepage": "https://github.com/JEESZZLY/dsh-sansheng-liubu#readme",
+  "bugs": {
+    "url": "https://github.com/JEESZZLY/dsh-sansheng-liubu/issues"
+  }
+}
