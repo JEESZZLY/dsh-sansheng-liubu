@@ -1,6 +1,6 @@
 {
   "name": "dsh-sansheng-liubu",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Sansheng Liubu — a Three Departments & Six Ministries board for DSH agent teams · 三省六部看板：把 DSH 团队（agentTeam）按中书省／门下省／尚书省＋六部归曹展示，附圣旨动效",
   "keywords": [
     "dsh",
